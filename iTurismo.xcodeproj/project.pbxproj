@@ -15,6 +15,10 @@
 		8362B29B1D9EDB6A00A48BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8362B2991D9EDB6A00A48BE4 /* LaunchScreen.storyboard */; };
 		8362B2A61D9EDB6A00A48BE4 /* iTurismoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362B2A51D9EDB6A00A48BE4 /* iTurismoTests.swift */; };
 		8362B2B11D9EDB6B00A48BE4 /* iTurismoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362B2B01D9EDB6B00A48BE4 /* iTurismoUITests.swift */; };
+		8362B2C11D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362B2C01D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift */; };
+		8362B2C31D9EDE1000A48BE4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8362B2C21D9EDE1000A48BE4 /* Social.framework */; };
+		8362B2C51D9EDE1B00A48BE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8362B2C41D9EDE1B00A48BE4 /* CoreLocation.framework */; };
+		8362B2C71D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362B2C61D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		8362B2AC1D9EDB6B00A48BE4 /* iTurismoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTurismoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8362B2B01D9EDB6B00A48BE4 /* iTurismoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTurismoUITests.swift; sourceTree = "<group>"; };
 		8362B2B21D9EDB6B00A48BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8362B2C01D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tercer_ControladorViewController.swift; sourceTree = "<group>"; };
+		8362B2C21D9EDE1000A48BE4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8362B2C41D9EDE1B00A48BE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8362B2C61D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cuarto_ControladorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8362B2C51D9EDE1B00A48BE4 /* CoreLocation.framework in Frameworks */,
+				8362B2C31D9EDE1000A48BE4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +89,8 @@
 		8362B2811D9EDB6A00A48BE4 = {
 			isa = PBXGroup;
 			children = (
+				8362B2C41D9EDE1B00A48BE4 /* CoreLocation.framework */,
+				8362B2C21D9EDE1000A48BE4 /* Social.framework */,
 				8362B28C1D9EDB6A00A48BE4 /* iTurismo */,
 				8362B2A41D9EDB6A00A48BE4 /* iTurismoTests */,
 				8362B2AF1D9EDB6B00A48BE4 /* iTurismoUITests */,
@@ -106,6 +118,8 @@
 				8362B2991D9EDB6A00A48BE4 /* LaunchScreen.storyboard */,
 				8362B29C1D9EDB6A00A48BE4 /* Info.plist */,
 				8362B2941D9EDB6A00A48BE4 /* iTurismo.xcdatamodeld */,
+				8362B2C01D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift */,
+				8362B2C61D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift */,
 			);
 			path = iTurismo;
 			sourceTree = "<group>";
@@ -262,6 +276,8 @@
 				8362B2901D9EDB6A00A48BE4 /* ViewController.swift in Sources */,
 				8362B28E1D9EDB6A00A48BE4 /* AppDelegate.swift in Sources */,
 				8362B2961D9EDB6A00A48BE4 /* iTurismo.xcdatamodeld in Sources */,
+				8362B2C11D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift in Sources */,
+				8362B2C71D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +504,7 @@
 				8362B2B71D9EDB6B00A48BE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8362B2B81D9EDB6B00A48BE4 /* Build configuration list for PBXNativeTarget "iTurismoTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +513,7 @@
 				8362B2BA1D9EDB6B00A48BE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8362B2BB1D9EDB6B00A48BE4 /* Build configuration list for PBXNativeTarget "iTurismoUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +522,7 @@
 				8362B2BD1D9EDB6B00A48BE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
