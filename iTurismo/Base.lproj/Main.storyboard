@@ -122,11 +122,23 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uCb-Mg-lL9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k90-5c-Ryo">
+                                <rect key="frame" x="237" y="522" width="127" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlChanged:" destination="VJc-Us-obS" eventType="valueChanged" id="CCz-ia-ilg"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xwy-FI-OVq" firstAttribute="top" secondItem="k90-5c-Ryo" secondAttribute="bottom" constant="50" id="6Nl-7w-Ytv"/>
                             <constraint firstItem="uCb-Mg-lL9" firstAttribute="bottom" secondItem="Xwy-FI-OVq" secondAttribute="top" id="FQP-aZ-V5n"/>
                             <constraint firstItem="uCb-Mg-lL9" firstAttribute="top" secondItem="hu1-Qo-lzk" secondAttribute="top" id="LUl-aq-uYZ"/>
+                            <constraint firstItem="k90-5c-Ryo" firstAttribute="centerX" secondItem="uCb-Mg-lL9" secondAttribute="centerX" id="bJI-IL-toP"/>
                             <constraint firstAttribute="trailing" secondItem="uCb-Mg-lL9" secondAttribute="trailing" id="lyp-E2-0VE"/>
                             <constraint firstItem="uCb-Mg-lL9" firstAttribute="leading" secondItem="hu1-Qo-lzk" secondAttribute="leading" id="vNS-YX-p6h"/>
                         </constraints>

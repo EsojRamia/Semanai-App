@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AddressBook
 
 class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -67,7 +68,9 @@ class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLL
         
         let center = CLLocationCoordinate2D(latitude: loc!.coordinate.latitude, longitude: loc!.coordinate.longitude)
         
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+        let region = MKCoordinateRegionMake(center, MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+        
+        //let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
         
         self.Mapa.setRegion(region, animated: true)
         
@@ -77,6 +80,24 @@ class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLL
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Errors" + error.localizedDescription)
     }
+    
+    private func cameraSetup(){
+        Mapa.camera.altitude = 1400
+        Mapa.camera.pitch = 50
+        Mapa.camera.heading = 180
+        
+    }
+    
+    @IBAction func segmentControlChanged(sender: AnyObject) {
+        switch sender.selectedSegmentIndex{
+        case 1:
+            Mapa.mapType = MKMapType.SatelliteFlyover
+            
+        default:
+            Mapa.mapType = MKMapType.Standard
+        }
+    }
+    
     
 
     /*
