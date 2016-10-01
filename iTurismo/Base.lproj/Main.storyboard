@@ -39,38 +39,6 @@
             </objects>
             <point key="canvasLocation" x="232" y="417"/>
         </scene>
-        <!--Mapa View Controller-->
-        <scene sceneID="dhQ-RE-gqE">
-            <objects>
-                <viewController id="bqu-cG-sMn" customClass="MapaViewController" customModule="iTurismo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2fA-ji-5n3"/>
-                        <viewControllerLayoutGuide type="bottom" id="LiN-jb-npj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Fc-HC-B58">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-9Q-czs">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NPH-9Q-czs" secondAttribute="trailing" id="02O-Ug-wVr"/>
-                            <constraint firstItem="NPH-9Q-czs" firstAttribute="leading" secondItem="4Fc-HC-B58" secondAttribute="leading" id="Lg4-Nu-fkC"/>
-                            <constraint firstItem="NPH-9Q-czs" firstAttribute="bottom" secondItem="LiN-jb-npj" secondAttribute="top" id="bxs-lc-YBO"/>
-                            <constraint firstItem="NPH-9Q-czs" firstAttribute="top" secondItem="4Fc-HC-B58" secondAttribute="top" id="hkF-gQ-LoZ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="NPH-9Q-czs" id="wtF-7m-CR7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uyb-ic-FQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="881" y="1657"/>
-        </scene>
         <!--Tercer Controlador View Controller-->
         <scene sceneID="Zu1-PF-k0h">
             <objects>
@@ -125,19 +93,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXG-Sx-ehl">
-                                <rect key="frame" x="277" y="139" width="46" height="30"/>
+                                <rect key="frame" x="549" y="562" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="BaS-6a-n2E" kind="show" id="tj7-8S-Vj1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-Q8-j4r">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="bqu-cG-sMn" kind="show" id="oIV-l6-gGj"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SZZ-sR-E4Y">
+                                <rect key="frame" x="26" y="20" width="554" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -145,38 +110,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYt-dJ-aW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="417"/>
-        </scene>
-        <!--Search View Controller-->
-        <scene sceneID="VO2-GO-62u">
-            <objects>
-                <viewController id="w0q-Yu-NCC" customClass="SearchViewController" customModule="iTurismo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cMe-pD-Mvy"/>
-                        <viewControllerLayoutGuide type="bottom" id="gEf-fb-Vhj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6CD-Cv-rUN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-Gm-bFa">
-                                <rect key="frame" x="121" y="265" width="359" height="220"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U6M-cI-S0d">
-                                <rect key="frame" x="180" y="197" width="240" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hnh-Im-MFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1556" y="1209"/>
         </scene>
         <!--Cuarto Controlador View Controller-->
         <scene sceneID="Kb2-gU-YJi">
