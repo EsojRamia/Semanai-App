@@ -21,7 +21,7 @@
                                 <rect key="frame" x="277" y="241" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="T7o-74-C9Z" kind="show" id="X0Z-7a-Ne5"/>
+                                    <segue destination="S0v-vd-XDl" kind="show" id="DtG-zF-lRz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yh-BF-ICq">
@@ -39,32 +39,37 @@
             </objects>
             <point key="canvasLocation" x="232" y="417"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QK3-mF-omf">
+        <!--Mapa View Controller-->
+        <scene sceneID="dhQ-RE-gqE">
             <objects>
-                <viewController id="T7o-74-C9Z" sceneMemberID="viewController">
+                <viewController id="bqu-cG-sMn" customClass="MapaViewController" customModule="iTurismo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xTV-hD-au5"/>
-                        <viewControllerLayoutGuide type="bottom" id="KPV-gI-vnF"/>
+                        <viewControllerLayoutGuide type="top" id="2fA-ji-5n3"/>
+                        <viewControllerLayoutGuide type="bottom" id="LiN-jb-npj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Nb-aG-08L">
+                    <view key="view" contentMode="scaleToFill" id="4Fc-HC-B58">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-g8-yE8">
-                                <rect key="frame" x="265" y="252" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BaS-6a-n2E" kind="show" id="JoD-7u-Pdv"/>
-                                </connections>
-                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-9Q-czs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NPH-9Q-czs" secondAttribute="trailing" id="02O-Ug-wVr"/>
+                            <constraint firstItem="NPH-9Q-czs" firstAttribute="leading" secondItem="4Fc-HC-B58" secondAttribute="leading" id="Lg4-Nu-fkC"/>
+                            <constraint firstItem="NPH-9Q-czs" firstAttribute="bottom" secondItem="LiN-jb-npj" secondAttribute="top" id="bxs-lc-YBO"/>
+                            <constraint firstItem="NPH-9Q-czs" firstAttribute="top" secondItem="4Fc-HC-B58" secondAttribute="top" id="hkF-gQ-LoZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="NPH-9Q-czs" id="wtF-7m-CR7"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yhM-os-HDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyb-ic-FQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="417"/>
+            <point key="canvasLocation" x="881" y="1657"/>
         </scene>
         <!--Tercer Controlador View Controller-->
         <scene sceneID="Zu1-PF-k0h">
@@ -105,7 +110,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdN-1U-D3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="417"/>
+            <point key="canvasLocation" x="2059" y="411"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Cek-B3-em1">
+            <objects>
+                <viewController id="S0v-vd-XDl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cuQ-nq-yaw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rmg-hF-C1l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VYk-ld-3jU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXG-Sx-ehl">
+                                <rect key="frame" x="277" y="139" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BaS-6a-n2E" kind="show" id="tj7-8S-Vj1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-Q8-j4r">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="bqu-cG-sMn" kind="show" id="oIV-l6-gGj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYt-dJ-aW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="417"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="VO2-GO-62u">
+            <objects>
+                <viewController id="w0q-Yu-NCC" customClass="SearchViewController" customModule="iTurismo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cMe-pD-Mvy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gEf-fb-Vhj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6CD-Cv-rUN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-Gm-bFa">
+                                <rect key="frame" x="121" y="265" width="359" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U6M-cI-S0d">
+                                <rect key="frame" x="180" y="197" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnh-Im-MFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="1209"/>
         </scene>
         <!--Cuarto Controlador View Controller-->
         <scene sceneID="Kb2-gU-YJi">
@@ -167,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvd-YF-Es6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="1191"/>
+            <point key="canvasLocation" x="232" y="1253"/>
         </scene>
     </scenes>
 </document>

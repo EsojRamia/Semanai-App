@@ -22,36 +22,22 @@ class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLL
 
         // Do any additional setup after loading the view.
         
+        Mapa.delegate = self
         
-        var location = CLLocationCoordinate2DMake(
-            22.2163108,
-            -97.8596762)
         
-        var ann = MKPointAnnotation()
-        ann.coordinate = (location)
-        ann.title = "Catedral de Tampico"
-        Mapa.addAnnotation(ann)
-        
-        var span = MKCoordinateSpanMake(0.2, 0.2)
-        
-        var region = MKCoordinateRegionMake(location, span)
-        
-        Mapa.setRegion(region, animated: true)
-        
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            CLLocationManager().requestWhenInUseAuthorization()
-        }
         
         
         self.locationManager.delegate = self
-        
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         self.locationManager.requestWhenInUseAuthorization()
         
         self.locationManager.startUpdatingLocation()
         
         self.Mapa.showsUserLocation = true
+        
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,16 +49,58 @@ class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLL
         
     }
     
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        var location = CLLocationCoordinate2DMake(
+            22.2163108,
+            -97.8596762)
+        
         let loc = locations.last
         
         let center = CLLocationCoordinate2D(latitude: loc!.coordinate.latitude, longitude: loc!.coordinate.longitude)
         
-        let region = MKCoordinateRegionMake(center, MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+        let region = MKCoordinateRegionMake(center, MKCoordinateSpanMake(0.02, 0.02))
         
-        //let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+        Mapa.setRegion(region, animated: true)
         
-        self.Mapa.setRegion(region, animated: true)
+        let sPlacemark = MKPlacemark(coordinate: location, addressDictionary: nil)
+        let dPlacemark = MKPlacemark(coordinate: center, addressDictionary: nil)
+        
+        let sMapItem = MKMapItem(placemark: sPlacemark)
+        let dMapItem = MKMapItem(placemark: dPlacemark)
+        
+        var ann = MKPointAnnotation()
+        ann.coordinate = (location)
+        ann.title = "Catedral de Tampico"
+        ann.subtitle = "Iglesia"
+        Mapa.addAnnotation(ann)
+        
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sMapItem
+        directionRequest.destination = dMapItem
+        directionRequest.transportType = .Any
+        
+        let directions = MKDirections(request: directionRequest)
+        
+        
+        
+        directions.calculateDirectionsWithCompletionHandler {
+            (response, error) -> Void in
+            
+            guard let response = response else {
+                if let error = error {
+                    print("Error: \(error)")
+                }
+                
+                return
+            }
+            
+            let route = response.routes[0]
+            self.Mapa.addOverlay((route.polyline), level: MKOverlayLevel.AboveRoads)
+            
+        }
+
         
     }
     
@@ -81,12 +109,6 @@ class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLL
         print("Errors" + error.localizedDescription)
     }
     
-    private func cameraSetup(){
-        Mapa.camera.altitude = 1400
-        Mapa.camera.pitch = 50
-        Mapa.camera.heading = 180
-        
-    }
     
     @IBAction func segmentControlChanged(sender: AnyObject) {
         switch sender.selectedSegmentIndex{
@@ -97,6 +119,15 @@ class Cuarto_ControladorViewController: UIViewController, MKMapViewDelegate, CLL
             Mapa.mapType = MKMapType.Standard
         }
     }
+    
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.greenColor()
+        renderer.lineWidth = 1.0
+        
+        return renderer
+    }
+    
     
     
 

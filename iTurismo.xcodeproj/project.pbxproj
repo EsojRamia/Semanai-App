@@ -19,6 +19,10 @@
 		8362B2C31D9EDE1000A48BE4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8362B2C21D9EDE1000A48BE4 /* Social.framework */; };
 		8362B2C51D9EDE1B00A48BE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8362B2C41D9EDE1B00A48BE4 /* CoreLocation.framework */; };
 		8362B2C71D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362B2C61D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift */; };
+		83BCB4841D9FFF8E0036DE84 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCB4831D9FFF8E0036DE84 /* MapaViewController.swift */; };
+		83BCB4861DA006340036DE84 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCB4851DA006340036DE84 /* SearchViewController.swift */; };
+		83BCB4881DA00BE20036DE84 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 83BCB4871DA00BE20036DE84 /* Podfile */; };
+		83BCB48A1DA01B5B0036DE84 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BCB4891DA01B5B0036DE84 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		8362B2C21D9EDE1000A48BE4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8362B2C41D9EDE1B00A48BE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8362B2C61D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cuarto_ControladorViewController.swift; sourceTree = "<group>"; };
+		83BCB4831D9FFF8E0036DE84 /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		83BCB4851DA006340036DE84 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		83BCB4871DA00BE20036DE84 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		83BCB4891DA01B5B0036DE84 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BCB48A1DA01B5B0036DE84 /* AddressBook.framework in Frameworks */,
 				8362B2C51D9EDE1B00A48BE4 /* CoreLocation.framework in Frameworks */,
 				8362B2C31D9EDE1000A48BE4 /* Social.framework in Frameworks */,
 			);
@@ -89,6 +98,8 @@
 		8362B2811D9EDB6A00A48BE4 = {
 			isa = PBXGroup;
 			children = (
+				83BCB4891DA01B5B0036DE84 /* AddressBook.framework */,
+				83BCB4871DA00BE20036DE84 /* Podfile */,
 				8362B2C41D9EDE1B00A48BE4 /* CoreLocation.framework */,
 				8362B2C21D9EDE1000A48BE4 /* Social.framework */,
 				8362B28C1D9EDB6A00A48BE4 /* iTurismo */,
@@ -120,6 +131,8 @@
 				8362B2941D9EDB6A00A48BE4 /* iTurismo.xcdatamodeld */,
 				8362B2C01D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift */,
 				8362B2C61D9EDF3500A48BE4 /* Cuarto_ControladorViewController.swift */,
+				83BCB4831D9FFF8E0036DE84 /* MapaViewController.swift */,
+				83BCB4851DA006340036DE84 /* SearchViewController.swift */,
 			);
 			path = iTurismo;
 			sourceTree = "<group>";
@@ -248,6 +261,7 @@
 			files = (
 				8362B29B1D9EDB6A00A48BE4 /* LaunchScreen.storyboard in Resources */,
 				8362B2981D9EDB6A00A48BE4 /* Assets.xcassets in Resources */,
+				83BCB4881DA00BE20036DE84 /* Podfile in Resources */,
 				8362B2931D9EDB6A00A48BE4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8362B2901D9EDB6A00A48BE4 /* ViewController.swift in Sources */,
+				83BCB4861DA006340036DE84 /* SearchViewController.swift in Sources */,
+				83BCB4841D9FFF8E0036DE84 /* MapaViewController.swift in Sources */,
 				8362B28E1D9EDB6A00A48BE4 /* AppDelegate.swift in Sources */,
 				8362B2961D9EDB6A00A48BE4 /* iTurismo.xcdatamodeld in Sources */,
 				8362B2C11D9EDDDE00A48BE4 /* Tercer_ControladorViewController.swift in Sources */,
